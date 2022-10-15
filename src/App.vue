@@ -1,9 +1,11 @@
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-    <span>{{msg}}</span>
-    <span>{{num}}</span>
-    <span>{{flag ? "是":"否"}}</span>
+    <span class="item">{{msg}}</span>
+    <span class="item">{{num}}</span>
+    <span class="item">{{flag ? "是":"否"}}</span>
+    <span class="item">{{obj.a}}+{{obj.b}}</span>
+    <span class="item">枚举 {{gender.male}}--{{gender.femal}}</span>
 
     <ul>
       <li v-for="i in arr" :key="i">{{i}}</li>
@@ -20,18 +22,75 @@ const msg:String = "这是一个字符串";
 const num:Number = 0;
 const flag:Boolean = false;
 const arr: Array<number> = [0,1,2,3,4];
+let obj : {
+  a: string,
+  b: string
+}
+obj = {
+  a: '1',
+  b: '2'
+}
 
+//类型断言
+let txt:string = "sssssssssssssss";
+// const len = (<string>txt).length
+const len = (txt as string).length
+console.log(len);
+
+
+
+  //枚举
+enum gender {
+  male = 2,
+  femal
+}
+
+function handleVoid() {
+  // console.log("void");
+}
+handleVoid()
+
+//接口
+interface city {
+  name: string,
+  area: string,
+  // lv?: Number  //可选属性 之后定义的属性可以不声明此项
+  // readonly lv: 99999  // 只读  只能是这个值
+  lv: Number
+}
+let jap:city = {
+  name: '小鬼子',
+  area: "asia",
+  lv: 999
+}
+console.log(jap);
+
+//索引签名  可以随意定义多个变量
+interface names {
+  [props: string] : number
+}
+
+let mans:names = {
+  name: 0,
+  123: 1
+}
+console.log(mans);
 
 </script>
 
 
 <style scoped>
+.item{
+  margin: 0 20px;
+  font-size: 20px;
+}
 *{
   list-style: none;
 }
 header {
   line-height: 1.5;
   max-height: 100vh;
+  display: block !important;
 }
 
 .logo {
