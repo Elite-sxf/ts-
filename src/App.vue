@@ -13,10 +13,13 @@
   </header>
 
   <RouterView />
+  <TsObj />
+
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router';
+import TsObj from "./components/ts-object.vue"
 
 const msg:String = "这是一个字符串";
 const num:Number = 0;
@@ -65,15 +68,17 @@ let jap:city = {
 }
 console.log(jap);
 
-//索引签名  可以随意定义多个变量
+//索引签名  可以随意定义多个变量 
 interface names {
-  [props: string] : number
+  // [props: string] : number
+  [props: number] : number
 }
 
-let mans:names = {
-  name: 0,
-  123: 1
-}
+// let mans:names = {
+//   name: 0,
+//   123: 1
+// }
+let mans:names = [1,2,23]
 console.log(mans);
 
 </script>
