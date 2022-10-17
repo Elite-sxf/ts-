@@ -19,7 +19,6 @@
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
-import TsObj from "./components/ts-object.vue"
 
 const msg:String = "这是一个字符串";
 const num:Number = 0;
