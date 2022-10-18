@@ -14,11 +14,15 @@
 
   <RouterView />
   <TsObj />
+  <tsTwo></tsTwo>
 
 </template>
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
+import TsObj from "./components/ts-object.vue";
+import tsTwo from "./components/tsTwo.vue";
+
 
 const msg:String = "这是一个字符串";
 const num:Number = 0;
@@ -32,6 +36,7 @@ obj = {
   a: '1',
   b: '2'
 }
+
 
 //类型断言
 let txt:string = "sssssssssssssss";
