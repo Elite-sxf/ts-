@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "suppressImplicitAnyIndexErrors":true,
+    "experimentalDecorators": true,
   },
   "files": [],
   "references": [

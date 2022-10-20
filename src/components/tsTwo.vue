@@ -55,6 +55,30 @@ function isStrOrNum<T extends String | Number>(v:T) {
     return console.log(v);
 }
 isStrOrNum(1)
+
+//映射
+type Iname = "Person" | "Hobby";
+type Iinfo = {
+    name: string,
+    age: number
+}
+//前一项为属性名 ，后一项为每个里面的属性
+type newType = Record<Iname, Iinfo>
+let newInfo: newType = {
+    Person: {
+        name: 'wo',
+        age:6
+    },
+    Hobby:  {
+        name: 'dog',
+        age:1
+    },
+}
+//第一个参数为接口 第二个为接口上的某个属性
+type newType2 = Pick<fanxing, "name">
+let newInfo2:newType2 = {
+    name: 1
+}
 </script>
 
 <style>

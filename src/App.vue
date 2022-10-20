@@ -15,6 +15,7 @@
   <RouterView />
   <TsObj />
   <tsTwo></tsTwo>
+  <twsThree></twsThree>
 
 </template>
 
@@ -22,7 +23,7 @@
 import { RouterLink, RouterView } from 'vue-router';
 import TsObj from "./components/ts-object.vue";
 import tsTwo from "./components/tsTwo.vue";
-
+import twsThree from "./components/tsThree.vue"
 
 const msg:String = "这是一个字符串";
 const num:Number = 0;

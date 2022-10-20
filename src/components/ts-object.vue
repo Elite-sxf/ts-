@@ -63,7 +63,7 @@ interface Iinfo {
     age: number,
     sing():void
 }
-
+//implements 继承一个接口
 class Info implements Iinfo {
     name:string =  'gai';
     age:number = 36;

@@ -6,5 +6,6 @@
     "lib": [],
     "types": ["node", "jsdom"],
     "suppressImplicitAnyIndexErrors":true,
+    "experimentalDecorators": true,
   }
 }
